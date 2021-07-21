@@ -1,10 +1,8 @@
 import React from 'react';
-import Header from '../Header';
 import Search from '../Search';
 import Categories from '../Categories';
 import Carousel from '../Carousel';
 import CarouselItem from '../CarouselItem';
-import Footer from '../Footer';
 import useInitialState from '../../hooks/useInitialState';
 import Loading from '../Loading';
 
@@ -12,11 +10,10 @@ import '../../assets/styles/App.scss';
 
 const API = 'http://localhost:3000/initialState';
 
-const App = (props) => {
+const Home = (props) => {
   const initialState = useInitialState(API);
   return initialState.loading ? <Loading /> : (
-    <div className='App'>
-      <Header />
+    <>
       <Search />
       <Categories title='Mi lista'>
         <Carousel>
@@ -61,9 +58,8 @@ const App = (props) => {
           }
         </Carousel>
       </Categories>
-      <Footer />
-    </div>
+    </>
 
   );
 };
-export default App;
+export default Home;
