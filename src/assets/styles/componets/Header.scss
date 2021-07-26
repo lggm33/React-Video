@@ -1,6 +1,6 @@
 .header {
+  margin-top: 15px;
   align-items: center;
-  background: #8f57fd;
   color: white;
   display: flex;
   height: 150px;
@@ -56,4 +56,9 @@
 .header__menu--profile img {
   margin-right: 8px;
   width: 40px;
+  border-radius: 50%;
+}
+
+.black {
+  background-color: #000;
 }
